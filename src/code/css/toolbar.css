@@ -136,6 +136,14 @@
   background-image: url(../images/toolbar_quickdelete.svg);
   background-size: 60%;
 }
+.wasabee-toolbar-undo {
+  background-image: url(../images/toolbar_undo.svg);
+  background-size: 60%;
+}
+.wasabee-toolbar-redo {
+  background-image: url(../images/toolbar_redo.svg);
+  background-size: 60%;
+}
 .wasabee-toolbar-link {
   background-image: url(../images/toolbar_addlinks.svg)
 }

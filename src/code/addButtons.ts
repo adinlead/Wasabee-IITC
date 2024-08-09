@@ -3,6 +3,7 @@ import QuickdrawButton from "./buttons/quickdrawButton";
 import WasabeeButton from "./buttons/wasabeeButton";
 import SyncButton from "./buttons/syncButton";
 import OpButton from "./buttons/opButton";
+import UndoButton from "./buttons/undoButton";
 import LinkButton from "./buttons/linkButton";
 import MarkerButton from "./buttons/markerButton";
 import UploadButton from "./buttons/uploadButton";
@@ -24,6 +25,7 @@ export function addButtons() {
     WasabeeButton,
     OpButton,
     QuickdrawButton,
+    UndoButton,
     QuickDeleteButton,
     LinkButton,
     MarkerButton,
