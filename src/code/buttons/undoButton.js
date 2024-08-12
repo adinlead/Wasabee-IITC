@@ -18,6 +18,8 @@ const UndoButton = WButton.extend({
       container: container,
       className: "wasabee-toolbar-undo",
       callback: () => {
+        console.log(this);
+        this.control.disableAllExcept();
         postToFirebase({ id: "analytics", action: "undo" });
         undo();
       },
