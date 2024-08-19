@@ -1,6 +1,6 @@
 import { WButton } from "../leafletClasses";
 import wX from "../wX";
-import { undo } from "../undo";
+import { undoable, undo } from "../undo";
 import { postToFirebase } from "../firebase/logger";
 
 const UndoButton = WButton.extend({
@@ -26,6 +26,35 @@ const UndoButton = WButton.extend({
       context: this,
       title: this.title,
     });
+  },
+  update: function () {
+    WButton.prototype.update.call(this);
+    console.log("UndoButton.update >> ", this);
+    if (undoable()) {
+      console.log(">> is undoable");
+      this.enable();
+    } else {
+      console.log(">> no undoable");
+      this.disable();
+    }
+  },
+  disable: function () {
+    console.log("do disable:", this);
+    let btn = this.button;
+    console.log(btn);
+    btn.style.pointerEvents = "none";
+    btn.style.cursor = "not-allowed";
+
+    btn.className = "wasabee-toolbar-undo-disable";
+  },
+  enable: function () {
+    console.log("do enable:", this);
+    let btn = this.button;
+    console.log(btn);
+    btn.style.pointerEvents = "auto";
+    btn.style.cursor = "pointer";
+
+    btn.className = "wasabee-toolbar-undo";
   },
 });
 

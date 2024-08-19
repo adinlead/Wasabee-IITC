@@ -140,6 +140,10 @@
   background-image: url(../images/toolbar_undo.svg);
   background-size: 60%;
 }
+.wasabee-toolbar-undo-disable {
+  background-image: url(../images/toolbar_undo_disable.svg);
+  background-size: 60%;
+}
 .wasabee-toolbar-redo {
   background-image: url(../images/toolbar_redo.svg);
   background-size: 60%;
